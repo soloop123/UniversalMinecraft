@@ -4,8 +4,8 @@ let authInstance;
 function loadClient() {
     gapi.load('client:auth2', () => {
         gapi.client.init({
-            apiKey: 'YOUR_API_KEY',
-            clientId: 'YOUR_CLIENT_ID',
+            apiKey: 'AIzaSyBk4co-2OqgPhm03dKmLxHkIrNX8vN5jz8',  // Replace with your API key here
+            clientId: '95262500450-nkcfila3pga74hnilqf9n5h12gig2li7.apps.googleusercontent.com',  // Your actual Client ID
             discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
             scope: 'https://www.googleapis.com/auth/drive.file'
         }).then(() => {
@@ -46,6 +46,8 @@ document.getElementById('upload-button').addEventListener('click', () => {
         return;
     }
 
+    // Here you can handle the logic of uploading the file to Google Drive
+    // For now, we are just adding the file link to the list
     const fileList = document.getElementById('file-list');
     const listItem = document.createElement('li');
     listItem.innerHTML = `<strong>${title}</strong><br>${description}<br><a href="${link}" target="_blank">Download</a>`;
