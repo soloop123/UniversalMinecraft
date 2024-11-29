@@ -28,22 +28,17 @@
     }
     /* To move the logo around */
 .logo-container {
-    display: flex; /* Makes it easier to align the logo */
-    align-items: center; /* Vertical alignment */
-    justify-content: flex-start; /* Horizontal alignment */
-    /* Use margin or padding to shift the logo */
-    margin: 5px; /* Example: Adds space around the logo */
-    padding: 5px; /* Adds space inside the container */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns logo to the left */
+    padding: 10px;
 }
 
-/* If you want to use absolute positioning for precise control */
 .logo {
-    position: relative; /* Change to absolute if needed */
-    left: 50px; /* Move right or left */
-    top: 50px;  /* Move up or down */
-    height: 200px; /* Adjust size */
+    height: 60px; /* Adjust based on your preference */
     width: auto;
 }
+
 
 /* Example for centering the logo horizontally */
 .header {
@@ -95,13 +90,12 @@
       margin: 20px auto;
       max-width: 1340px;
     }
-    .card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Defines 3 equal-width columns */
-  gap: 20px; /* Adds spacing between cards */
-  max-width: 1200px; /* Ensures container width aligns with card sizes */
-  margin: 0 auto; /* Centers the grid container */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
+
 
 
 
