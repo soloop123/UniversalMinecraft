@@ -1,0 +1,256 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.ibb.co/h9nx3JV/image-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #050505f8;
+  }
+  header {
+    background-color: rgba(160, 58, 228, 0.623);
+    color: white;
+    padding: 0px 5px;
+    background-image: url('https://img.freepik.com/premium-vector/abstract-background-small-squares-pixels-green-colors_444390-5483.jpg');
+    text-align: Center;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+  }
+  /* To move the logo around */
+.logo-container {
+  display: flex; /* Makes it easier to align the logo */
+  align-items: center; /* Vertical alignment */
+  justify-content: flex-start; /* Horizontal alignment */
+  /* Use margin or padding to shift the logo */
+  margin: 5px; /* Example: Adds space around the logo */
+  padding: 5px; /* Adds space inside the container */
+}
+
+/* If you want to use absolute positioning for precise control */
+.logo {
+  position: relative; /* Change to absolute if needed */
+  left: 50px; /* Move right or left */
+  top: 50px;  /* Move up or down */
+  height: 200px; /* Adjust size */
+  width: auto;
+}
+
+
+/* Example for centering the logo horizontally */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers content horizontally */
+}
+
+/* Example for keeping the logo on the left */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Logo on the left, nav on the right */
+}
+/* Banner container (800x100) */
+.ad-banner {
+position: relative;
+width: 800px; /* Banner width */
+height: 100px; /* Banner height */
+margin: 0 auto;
+overflow: hidden;
+border-radius: 2px; /* Optional: Rounded corners */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+}
+
+/* Slides wrapper */
+.banner-slides {
+display: flex;
+width: calc(800px * 3); /* Three slides, each 800px wide */
+height: 100%;
+animation: slide-animation 12s infinite; /* Slide every 4 seconds per slide */
+transition: transform 0.5s ease-in-out;
+}
+
+/* Each slide */
+.slide {
+width: 800px; /* Same as banner width */
+height: 100px; /* Same as banner height */
+flex-shrink: 0;
+object-fit: cover; /* Ensures the image fits nicely */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide-animation {
+0%, 33% {
+  transform: translateX(0); /* Show the first slide */
+}
+33.1%, 66% {
+  transform: translateX(-800px); /* Show the second slide */
+}
+66.1%, 100% {
+  transform: translateX(-1600px); /* Show the third slide */
+}
+}
+
+
+
+  #intro {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
+  }
+
+  nav {
+    background-color: rgba(53, 194, 48, 0.979);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fdfdfd;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: rgba(103, 209, 100, 0.979);
+    color: #ffffff;
+  }
+
+  .container {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0 !important;
+    margin: 20px auto;
+    max-width: 1340px;
+  }
+  .card-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* Defines 3 equal-width columns */
+gap: 20px; /* Adds spacing between cards */
+max-width: 1340px; /* Ensures the container fits the cards */
+margin: 0 auto; /* Centers the grid container */
+}
+
+.card {
+background: rgb(255, 255, 255);
+border-radius: 0px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.411);
+height: auto; /* Allows dynamic height */
+text-align: center;
+position: relative;
+overflow: hidden;
+padding: 10px;
+width: 100%; /* Card will adjust to fit the grid column */
+max-width: 360px; /* Optional: Limits the card width */
+margin: 0 auto; /* Centers the card content */
+}
+
+
+
+  .image-slider {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: px;
+  }
+
+  .image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+  .image-slider img.active {
+    left: 0;
+    opacity: 1;
+  }
+  .image-sliderskin {
+    position: relative;
+    width: 288px;
+    height: 256px;
+    overflow: hidden;
+    border-radius: px;
+  }
+
+  .image-sliderskin img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+  .image-sliderskin img.active {
+    left: 0;
+    opacity: 1;
+  }
+
+
+  .arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .card-title {
+    font-size: 20px;
+    color: #353434;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  .card-description {
+  font-size: 15px;
+  color: #353434;
+  margin: 10px 0 20px;
+  line-height: 1.5;
+  }
+
+  .download-button {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: rgba(56, 202, 51, 0.979);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .download-button:hover {
+    background-color: rgba(93, 190, 80, 0.979);
+  }
+  .download-buttonad {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: rgba(185, 78, 206, 0.986);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .download-buttonad:hover {
+    background-color: rgba(184, 19, 218, 0.979);
+  }
